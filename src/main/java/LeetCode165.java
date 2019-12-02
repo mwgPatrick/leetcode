@@ -10,6 +10,9 @@ import java.util.List;
  */
 public class LeetCode165 {
     public static int compareVersion(String version1, String version2) {
+        /*
+        切割字符串中的小数点需要使用转义
+         */
         String[] v11 = version1.split("\\.");
         String[] v22 = version2.split("\\.");
         List<Integer> v1 = new ArrayList<>();

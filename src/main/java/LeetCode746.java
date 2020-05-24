@@ -5,10 +5,10 @@ import java.util.List;
  * LeetCode746 https://leetcode-cn.com/problems/min-cost-climbing-stairs/
  * 一开始比较笨的本法是递归，但是很明显会超时。
  * 所以用下面的方法：
- * 新建一个数组保存到达每一个位置所需的最小值，
+ * 新建一个数组res保存到达每一个位置所需的最小值，
  * 第一个台阶为cost[0]
  * 第二个台阶为cost[1]
- * 从第三个台阶开始记为i，第i个台阶为cost[i-1] + Math.min(cost[i-2],cost[i-3]
+ * 从第三个台阶开始记为i，第i个台阶为cost[i-1] + Math.min(res.get(i-2),res.get(i-3))
  * 最终结果就是整个数组中后两个值较小的一个
  * @author Mwg
  * @date 2020/05/24 09:03
